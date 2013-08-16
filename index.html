@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+	<title>Geo Center</title>
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&v=3.8"></script>
+	<script src="OpenLayers-2.12/OpenLayers.debug.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="prefs.js"></script>
+	<script src="module.js"></script>
+	<script src="component.js"></script>
+	<script src="locations.js"></script>
+	<script src="assets.js"></script>
+	<script src="layers.js"></script>
+	<script src="map.js"></script>
+	<!--script src="chart.js"></script-->
+	<script>function main() { Map.init() }</script>
+</head>
+<body onload="main()"><table id="main">
+	<tr>
+		<td id="title"><table id="logo"><thead>
+			<th>Geo Center</th>
+		</thead></table></td>
+	</tr>
+	<tr><td id="settings">
+		<table><ul id="menu">
+			<li><img src="icons/house.png"> <a id="home" name="module"> Home</a></li>
+			<li><img src="icons/map.png"> <a id="map" name="module"> Map</a></li>
+			<li><img src="icons/chart_curve.png"> <a id="report" name="module"> Charts</a></li>
+			<li><img src="icons/help.png"> <a id="help" name="module"> Help</a></li>
+			<li><img src="icons/cancel.png"> <a id="log_out" name="module"> Log Out</a></li>
+		</ul></table>
+		<table id="picker">
+			<thead><th id="top" colspan=3>
+				<img id="module_icon" src="icons/map.png">
+				<a id="module">Map</a>
+				<img id="cmp_icon" src="icons/layers.png">
+				<select id="component">
+					<option>Locations</option>
+					<option>Assets</option>
+					<option>Layers</option>
+				</select>
+			</th></thead>
+			<tbody id="locations">
+				<tr><td class="section" colspan=3>
+					<ul>
+						<li><label><input id="spatial" type="checkbox" checked /> Spatial</label></li>
+						<span id="spatial_set">
+							<li><label>
+								<input id="manhattan" type="radio" name="spatial" title="-74.13216171264665,40.70242748949199,-73.74317703247019,40.87554519771355" />
+								Manhattan
+							</label></li>
+							<li><label>
+								<input id="central-park" type="radio" name="spatial" title="-74.01470241546569,40.76005351239628,-73.91745624542158,40.80580654873116" />
+								Central Park
+							</label></li>
+							<li><label>
+								<input id="roosevelt-island" type="radio" name="spatial" title="-73.97270438671049,40.75000832344566,-73.92408130168934,40.77289223948625" />
+								Roosevelt Island
+							</label></li>
+							<li><label>
+								<input id="san-francisco" type="radio" name="spatial" title="-122.61527297495314,37.64293884438036,-122.22628829477308,37.834077376993186" />
+								San Francisco
+							</label></li>
+						</span>
+					</ul>
+					<ul>
+						<li><label><input id="temporal" type="checkbox" disabled /> Temporal</label></li>
+						<span id="temporal_set">
+							<li><center>
+								<input type="button" value="|&lt;&lt;" />
+								<input type="button" value="&lt;&lt;" />
+								<input type="button" value="&gt;" />
+								<input type="button" value="&gt;&gt;" />
+								<input type="button" value="&gt;&gt;|" />
+							</center></li>
+							<li>
+								Start
+								<input type="date" />
+								<input type="number" min=0 max=23 value=12 />
+								<input type="number" min=0 max=30 step=30 value=0 />
+								<input type="date" />
+								<input type="time" />
+								<input class="year" type="number" min=2001 max=2012 value=2012 />-
+								<input class="month" type="number" min=1 max=12 value=9 />-
+								<input class="day" type="number" min=1 max=29 value=1 />&nbsp;
+								<input class="hour" type="number" min=0 max=23 value=12 />:
+								<input class="minute" type="number" min=0 max=59 value=12 />:
+								<input class="second" type="number" min=0 max=59 value=12 />
+							</li>
+							<li>
+								End&nbsp;
+								<input type="date" />
+								<input type="number" min=0 max=23 value=12 />
+								<input type="number" min=0 max=30 step=30 value=0 />
+							</li>
+						</span>
+					</ul>
+				</tr>
+			</tbody>
+			<tbody id="assets"></tbody>
+			<tbody id="layers">
+				<tr><td class="section" colspan=2>
+					<ul>
+						<li><label><input id="base" type="checkbox" checked /> Base</label></li>
+						<span id="base_set">
+						<li><label>
+								<input id="osm" type="radio" name="base" title="OpenStreetMap" /> OpenStreetMap</label>
+							</label></li>
+							<li><label>
+								<input id="gmap" type="radio" name="base" title="Street" /> Google Street</label>
+							</label></li>
+							<li><label>
+								<input id="gsat" type="radio" name="base" title="Satellite"/> Google Satellite</label>
+							</label></li>
+						</span>
+					</ul>
+					<ul>
+						<li>
+							<label><input id="data" type="checkbox" disabled /> Data</label>
+						</li>
+						<span id="data_set">
+							<li><label>
+								<input id="test_roads" type="checkbox" name="data" />
+								Test Roads
+							</label></li>
+						</span>
+					</ul>
+				</td></tr>
+			</tbody>
+		</table>
+	</td>
+	<td id="screen"></td>
+	</tr></table>
+</body>
+</html>

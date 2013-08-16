@@ -1,0 +1,244 @@
+/* Structure ------------------------------------------------------------- */
+
+td { padding: 0px; }
+/*tbody { width: 100%; }
+thead { width: 100%; }*/
+
+body {
+	background-color: #f3f7fb;
+}
+
+table {
+	font-family: helvetica, arial, sans-serif;
+	border-collapse: collapse;
+}
+
+/* Remove this and add new menu */
+th {
+	text-align: left;
+	width: 100%;
+	height: 42px;
+	margin-bottom: -20px;
+	padding: 2px;
+	border-top: solid #f3f7fb 1px;
+	border-bottom: solid #b9d0ee 2px;
+	background: #d9e7f8;
+	color: red;
+	font-size: 20px;
+}
+
+/* Remove this and make part of components */
+select {
+	background: #d9e7f8;
+	color: #04408c;
+	font-family: helvetica;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/*input[type=number] {
+	width: 20px;
+}*/
+
+#main {
+	width: 100%;
+	height: 100%;
+}
+
+/* Header ---------------------------------------------------------------- */
+
+#title th {
+
+	/* Background */
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position:right; 
+
+	/* Font */
+	font-size: 30px !important;
+	color: #04408c;
+
+	/* Border */
+	border: solid 1px #b9d0ee;
+	border-bottom-width: 2px;
+	
+	/* Structure */
+	padding-top: 14px;
+	padding-left: 14px;	
+	padding-bottom: 14px;
+	
+}
+
+#logo {
+	width: 100%;
+}
+
+#user {
+	border-top: solid 22px #f3f7fb;
+}
+
+/* Module menu -------------------- */
+
+a {
+	color: #04408c;	
+	font-size: 20px;
+	font-family: helvetica;
+	text-decoration: none;
+	border-bottom: dotted #04408c 1px;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.extended {
+	text-align: center;
+}
+
+#menu {
+	display: none;
+	border-bottom: solid #04408c 1px;
+}
+
+#menu li:first-child {
+	font-weight: normal;
+	border-top: none;
+}
+
+/* Module menu buttons */
+#menu a {
+	display: block;
+}
+
+/* Module menu icons */
+li img {
+	float: left;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+/* Settings ---------------------------------------------------------------- */
+
+#settings {
+	position: absolute;
+	height: 87%;
+	overflow: scroll;
+	width: 20%;
+	border-top: none;
+	border-left: solid 1px #b9d0ee;
+	border-right: solid 1px #aaa;
+	border-bottom: solid #b9d0ee 4px;
+}
+
+/* Make width of picker list items that of the container */
+#picker {
+	width: 100%;
+}
+
+/* Top ---------------------------- */
+
+#top {
+	position: fixed;
+	padding-top: 10px;
+}
+
+#module_icon {
+	margin-left: 4px;
+}
+
+#locations, #assets, #layers {
+	width: 100%;
+	position: relative;
+	visibility: hidden;
+}
+
+/* Space above settings lists because of fixed #top */
+ul:first-child {
+	margin-top: 57px;
+}
+
+/* Sections & List Items ---------- */
+
+/* Section heading */
+/* TODO Get rid of class if possible */
+.section {
+	background: white;
+	text-align: left;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	border-bottom: solid #ddd 1px;
+}
+
+li:first-child {
+	font-weight: bold;
+	background: #F3F7FB;
+}
+
+span li:first-child {
+	border-top: solid #04408c 1px;
+	font-weight: normal;
+	background: #fff;
+}
+
+li {
+	border-top: solid #ddd 1px;
+	color: #04408c;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+label {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 4px;
+	display: block;
+	cursor: pointer;
+	/*background: red;*/
+}
+
+span label:hover {
+	background: lightyellow;
+}
+
+/* Locations ------------------------ */
+
+#locations {
+	visibility: visible;
+}
+
+/** TODO */
+
+
+/* Temporal */
+.controls {
+	text-align: center;
+}
+
+/* Assets ------------------------ */
+
+.black {
+	background: black;
+}
+
+/* Layers ------------------------ */
+
+/* Screen ---------------------------------------------------------------- */
+
+#screen {
+	position: absolute;
+	height: 87%;
+	width: 78.7%;
+	right: 8px;
+	border-right: solid #b9d0ee 1px;
+	border-bottom: solid #b9d0ee 4px;
+}
